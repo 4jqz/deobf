@@ -20,9 +20,9 @@ python deobf.py -d https://link.com/malware.exe
 
 ```cmd
 you can also just open v2 just browse for a file as links dont work
+```
 ![Tut](https://github.com/user-attachments/assets/be8201a7-93d2-45ed-9591-250fe973f985)
 
-```
 ## Help 
 You can also do this to get help
 
