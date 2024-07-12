@@ -16,6 +16,10 @@ You can also directly analyze it from a external source
 python deobf.py -d https://link.com/malware.exe
 ```
 
+```cmd
+you can also just open v2 just browse for a file as links dont work
+```
+
 You can also do this to get help
 
 ```cmd
