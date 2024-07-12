@@ -15,10 +15,12 @@ You can also directly analyze it from a external source
 ```cmd
 python deobf.py -d https://link.com/malware.exe
 ```
+
 ## V2 Usage
 
 ```cmd
 you can also just open v2 just browse for a file as links dont work
+![Tut](https://github.com/user-attachments/assets/cfb20ea1-6d1c-42be-8140-c4132dce35e8)
 ```
 ## Help 
 You can also do this to get help
