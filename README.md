@@ -32,7 +32,6 @@ python deobf.py -h
 
 some grabbers like empyrean need python 3.10 so be sure to check the extractor warnings if there are.
 **if you have an error with thiefcat deobfuscation, use python 3.11.4**
-![Tutorial](tutorial.gif)
 
 ## Decompiler & Disassembler
 
