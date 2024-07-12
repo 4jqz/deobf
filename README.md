@@ -2,7 +2,7 @@
 
 This repository contains some methods to disassemble and deobfuscate discord malwares (Blank, and others). It will give you the webhook and validate it if it found one.
 
-## Usage
+## V1 Usage
 
 Open cmd.exe (or powershell idfk) and type this in the SAME directory as the script
 
@@ -15,11 +15,12 @@ You can also directly analyze it from a external source
 ```cmd
 python deobf.py -d https://link.com/malware.exe
 ```
+## V2 Usage
 
 ```cmd
 you can also just open v2 just browse for a file as links dont work
 ```
-
+## Help 
 You can also do this to get help
 
 ```cmd
