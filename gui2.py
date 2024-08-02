@@ -13,7 +13,17 @@ from methods.other import OtherDeobf
 from utils.decompile import unzipJava, checkUPX
 from utils.pyinstaller.pyinstaller import ExtractPYInstaller
 from utils.pyinstaller.pyinstallerExceptions import ExtractionError
+import sys
 
+def hide_terminal():
+    if sys.platform == "win32":
+        import ctypes
+        ctypes.windll.kernel32.SetConsoleTitleW("")  # Hide the console window
+
+# Call the function to hide the terminal
+hide_terminal()
+
+# File download functions
 def download_file(url):
     if "github.com" in url:
         url = url.replace("github.com", "api.github.com/repos") + "/zipball"
@@ -105,9 +115,9 @@ file_entry = ttk.Entry(tab1, width=50)
 file_entry.pack(pady=5)
 ttk.Button(tab1, text="Browse", command=select_file, bootstyle="success-outline").pack(pady=5)
 download_var = tk.BooleanVar()
-ttk.Checkbutton(tab1, text="Download the file from a link", variable=download_var, bootstyle="round-toggle").pack(pady=5)
+ttk.Checkbutton(tab1, text="Download the file from a link (not working)", variable=download_var, bootstyle="round-toggle").pack(pady=5)
 github_var = tk.BooleanVar()
-ttk.Checkbutton(tab1, text="Download from GitHub", variable=github_var, bootstyle="round-toggle").pack(pady=5)
+ttk.Checkbutton(tab1, text="Download from GitHub (not working)", variable=github_var, bootstyle="round-toggle").pack(pady=5)
 ttk.Button(tab1, text="Run Deobfuscator", command=start_deobfuscation, bootstyle="primary-outline").pack(pady=20)
 output_text = tk.Text(tab1, height=10, width=70)
 output_text.pack(pady=10)
