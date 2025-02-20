@@ -17,7 +17,6 @@ timeout /t 3 /nobreak >nul
 cls
 
 
-REM Check if tkinter is installed
 python -c "import tkinter" 2>NUL
 IF ERRORLEVEL 1 (
     echo Installing tkinter...
