@@ -18,12 +18,10 @@ import sys
 def hide_terminal():
     if sys.platform == "win32":
         import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW("")  # Hide the console window
+        ctypes.windll.kernel32.SetConsoleTitleW("")
 
-# Call the function to hide the terminal
 hide_terminal()
 
-# File download functions
 def download_file(url):
     if "github.com" in url:
         url = url.replace("github.com", "api.github.com/repos") + "/zipball"
@@ -97,16 +95,13 @@ def change_icon():
         except Exception as e:
             display_message(f"[-] Error setting icon: {str(e)}")
 
-# Create the main window
 root = ttk.Window(themename="flatly")
 root.title("Deobfuscator GUI")
 root.geometry("600x400")
 
-# Create a Notebook widget (tabs)
 notebook = ttk.Notebook(root)
 notebook.pack(expand=True, fill='both')
 
-# Tab 1 - Deobfuscation
 tab1 = ttk.Frame(notebook)
 notebook.add(tab1, text="Deobfuscate")
 
@@ -122,7 +117,6 @@ ttk.Button(tab1, text="Run Deobfuscator", command=start_deobfuscation, bootstyle
 output_text = tk.Text(tab1, height=10, width=70)
 output_text.pack(pady=10)
 
-# Tab 2 - Change Icon
 tab2 = ttk.Frame(notebook)
 notebook.add(tab2, text="Change Icon")
 ttk.Label(tab2, text="Select an icon image file:", bootstyle="primary").pack(pady=10)
