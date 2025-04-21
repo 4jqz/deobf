@@ -1,3 +1,7 @@
+**If it doesn't work I will fix it at some point**
+
+
+
 # Grabbers Deobfuscator
 
 This repository contains some methods to disassemble and deobfuscate discord malwares (Blank, and others). It will give you the webhook and validate it if it found one.
