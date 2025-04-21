@@ -43,14 +43,11 @@ def run_deobfuscator(filename, download=False, is_github=False):
             display_message("[+] Downloading file")
             filename = download_from_mega(filename) if "mega.nz" in filename else download_file(filename)
             display_message("[+] File downloaded")
-
         if not os.path.exists(filename):
             display_message("[-] This file does not exist")
             return
-
         filename = os.path.abspath(filename)
         webhook = ""
-
         if filename.endswith(".jar"):
             display_message("[+] Java grabber suspected, scanning strings...")
             javadir = unzipJava(filename)
@@ -72,9 +69,7 @@ def run_deobfuscator(filename, download=False, is_github=False):
             except ExtractionError as e:
                 display_message(str(e))
                 return
-
         display_message(f"[+] Webhook: {webhook}" if webhook else "[-] No valid webhook found.")
-
     except Exception as e:
         display_message(f"Error: {str(e)}")
 
@@ -122,5 +117,4 @@ notebook.add(tab2, text="Change Icon")
 ttk.Label(tab2, text="Select an icon image file:", bootstyle="primary").pack(pady=10)
 ttk.Button(tab2, text="Change Icon", command=change_icon, bootstyle="success-outline").pack(pady=20)
 
-# Start the main loop
 root.mainloop()
